@@ -7,7 +7,7 @@
     "build": "tsc",
     "build:watch": "tsc -w",
     "serve:front-end": "cd front-end && live-server",
-    "server:server": "nodemon"
+    "serve:back-end": "cd server && nodemon"
   },
   "author": "",
   "license": "ISC",
