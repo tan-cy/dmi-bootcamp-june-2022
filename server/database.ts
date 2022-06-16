@@ -16,6 +16,10 @@ export class Database {
     });
   }
 
+  static getTodo(id: string): Todo | undefined {
+    return Database.todos.find((todo) => todo.id === id);
+  }
+
   static getAll(): Todo[] {
     return Database.todos;
   }

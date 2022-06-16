@@ -17,8 +17,13 @@ app.post("/todo", (req, res) => {
 
 app.delete("/todo/:id", (req, res) => {
   const id = req.params.id;
-  Database.delete(id);
-  res.status(200).send({ message: "Successfully deleted todo" });
+  const todo = Database.getTodo(id);
+  if (!todo) {
+    res.status(404).send({ message: "todo does not exist" });
+  } else {
+    Database.delete(id);
+    res.status(200).send({ message: "Successfully deleted todo" });
+  }
 });
 
 app.listen(port, () => {
