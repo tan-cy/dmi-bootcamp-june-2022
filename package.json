@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc -w",
-    "serve": "live-server"
+    "serve": "cd front-end && live-server"
   },
   "author": "",
   "license": "ISC",
